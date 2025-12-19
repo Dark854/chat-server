@@ -1,0 +1,21 @@
+Git репозиторий готов! Теперь:
+
+1. Создай репозиторий на GitHub:
+   - Зайди на github.com
+   - Нажми "New repository"
+   - Название: chat-server (или любое другое)
+   - Public
+   - НЕ добавляй README, .gitignore, license
+   - Нажми "Create repository"
+
+2. Подключи и загрузи:
+   git remote add origin https://github.com/ТВОЙ-USERNAME/chat-server.git
+   git push -u origin main
+
+   (Замени ТВОЙ-USERNAME на свой GitHub username)
+
+3. После этого в Render выбери этот репозиторий и настрой:
+   - Root Directory: server
+   - Build Command: npm install
+   - Start Command: node server.js
+

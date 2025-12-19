@@ -364,13 +364,9 @@ app.delete('/users/clear', (req, res) => {
   });
 });
 
-// ОЧИСТКА ВСЕХ ПОЛЬЗОВАТЕЛЕЙ ПРИ СТАРТЕ
-console.log('🗑️ Clearing all users on startup...');
-users.clear();
-usersByPhone.clear();
-userSockets.clear();
-messages.clear();
-console.log('✅ All users cleared!');
+// Автоматическая очистка отключена - пользователи сохраняются между перезапусками
+// Для очистки используй: DELETE https://chat-server-n43d.onrender.com/users
+console.log('📦 Server starting - users will persist between restarts');
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, '0.0.0.0', () => {
